@@ -8,6 +8,8 @@
     --light: #fff;
     --light-rgb: 255, 255, 255;
     --dark-blue: #1E2F40;
+
+    --tr: .2s
 }
 
 body {
@@ -68,6 +70,7 @@ a {
     height: 3px;
     background-color: transparent;
     border-radius: 1.5px;
+    transition: var(--tr);
 }
 
 .nav-link:hover::after {
@@ -147,6 +150,7 @@ a {
 .breadcrumbs-link {
     color: rgba(var(--light-rgb), .5);
     font-size: 15px;
+    transition: var(--tr);
 }
 
 .breadcrumbs-link:hover {
@@ -228,6 +232,11 @@ a {
     font-family: var(--nunito-sans);
     text-transform: uppercase;
     color: var(--dark);
+    transition: var(--tr);
+}
+
+.banner-btn:hover {
+    background-color: var(--accent-dark);
 }
 
 .menu-header {
@@ -331,12 +340,12 @@ a {
     align-content: center;
     justify-content: center;
     padding-top: 10px;
+    transition: var(--tr);
 }
 
 .menu-btn:hover {
     background-color: var(--accent-dark);
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .menu-btn::before {
@@ -399,6 +408,11 @@ a {
     color: rgba(var(--light-rgb), .9);
     font-size: 15px;
     line-height: 160%;
+    transition: var(--tr);
+}
+
+.footer-link:hover {
+    color: var(--accent-light);
 }
 
 .footer-list {
@@ -432,4 +446,9 @@ a {
     font-weight: 800;
     text-transform: uppercase;
     margin-top: 12px;
+    transition: var(--tr);
+}
+
+.footer-tel:hover {
+    color: #c58912;
 }
