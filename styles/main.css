@@ -26,6 +26,7 @@ a {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    box-sizing: border-box;
 }
 
 /* Header */
@@ -37,7 +38,7 @@ a {
 .header-wrapper {
     display: flex;
     align-items: center;
-    gap: 196px;
+    gap: 56px;
     padding-top: 26px;
     padding-bottom: 26px;
 }
@@ -55,6 +56,7 @@ a {
     flex-grow: 1;
     display: flex;
     gap: 46px;
+    margin-left: min(10vw, 140px);
 }
 
 .nav-link {
@@ -372,7 +374,6 @@ a {
     text-transform: uppercase;
     font-weight: 600;
     font-family: var(--nunito-sans);
-    align-content: center;
     justify-content: center;
     padding-top: 10px;
     transition: var(--tr);
@@ -411,6 +412,7 @@ a {
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
 }
 
 .footer-logo {
@@ -484,6 +486,94 @@ a {
     transition: var(--tr);
 }
 
+.footer-phone {
+    width: 198px;
+}
+
+.footer-tel._mobile {
+    display: none;
+}
+
 .footer-tel:hover {
     color: #c58912;
+}
+
+@media (max-width: 1080px) {
+    .header-wrapper {
+        gap: 40px;
+    }
+    .nav {
+        margin-left: 0;
+        gap: min(3vw, 30px);
+    }
+
+    .menu-name {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 150px;
+        height: 47.81px;
+    }
+    .header-wrapper {
+        gap: 45px;
+    }
+    .nav {
+        gap: 22px;
+    }
+    .banner {
+        margin-top: 72px;
+    }
+    .banner-wrapper {
+        padding: 100px 40px;
+    }
+    .menu-header {
+        margin-top: 80px;
+    }
+    
+    .menu-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-box._additionaly {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .menu-item._additionaly {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        flex-basis: 40%;
+    }
+
+    .menu-item._additionaly .menu-thumb {
+        width: 455px;
+        height: 300px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .menu-item._additionaly .menu-info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-name {
+        width: 150px;
+    }
+
+    .footer-phone {
+        display: none;
+        width: 150px;
+    }
+
+    .footer-tel._mobile {
+        display: block;
+    }
 }

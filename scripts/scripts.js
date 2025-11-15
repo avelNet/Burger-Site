@@ -32,8 +32,8 @@ document.querySelector(href).scrollIntoView({
 }
 
 function scrollFunction(){
-    if (document.body.scrollTop > 1000 || document.documentElementscrollTop > 1000){
-    document.getElementById('btnUp').className = 'button-up visible';
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+        document.getElementById('btnUp').className = 'button-up visible';
     } else {
         document.getElementById('btnUp').className = 'button-up hidden';
     }
