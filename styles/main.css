@@ -508,7 +508,15 @@ a {
     }
 
     .menu-name {
-        width: 200px;
+        width: 180px;
+    }
+
+    .menu-name._additionaly {
+        height: 70px;
+    }
+
+    .menu-name._special {
+        height: 70px;
     }
 }
 
